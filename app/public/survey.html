@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Match Your Friends</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center jumbotron">Let's find you a match!</h1>
+        <div class="form-group">
+            <h4>Your name:</h4>
+            <input type="text" name="" id="name" class="form-control mb-3" required>
+            <h4>Link to your photo:</h4>
+            <input type="text" name="" id="photo" class="form-control mb-5" required>
+        </div>
+        <hr>
+
+        <div class="form-group">
+            <h4>1) You are a master of procrastination.</h4>
+            <select class="form-control mb-5" id="question1">
+                <option value="">Select...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Undecided</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+            <h4>2) You love Italian food.</h4>
+            <select class="form-control mb-5" id="question2">
+                <option value="">Select...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Undecided</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+            <h4>3) You don't like waking up early.</h4>
+            <select class="form-control mb-5" id="question3">
+                <option value="">Select...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Undecided</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+            <h4>4) You were dropped on your head when you were little.</h4>
+            <select class="form-control mb-5" id="question4">
+                <option value="">Select...</option>
+                <option value="1">Definitely Not</option>
+                <option value="2">Probably Not</option>
+                <option value="3">Possibly</option>
+                <option value="4">Very Probably</option>
+                <option value="5">Definitely</option>
+            </select>
+
+            <h4>5) You love all the Star Wars movies.</h4>
+            <select class="form-control mb-5" id="question5">
+                <option value="">Select...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Undecided</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+            <h4>6) You like cooking your own food.</h4>
+            <select class="form-control mb-5" id="question6">
+                <option value="">Select...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Undecided</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+            <h4>7) You love to study.</h4>
+            <select class="form-control mb-5" id="question7">
+                <option value="">Select...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Undecided</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+            <h4>8) You watch the news often.</h4>
+            <select class="form-control mb-5" id="question8">
+                <option value="">Select...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Undecided</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+            <h4>9) The world is round.</h4>
+            <select class="form-control mb-5" id="question9">
+                <option value="">Select...</option>
+                <option value="1">Definitely Not</option>
+                <option value="2">Probably Not</option>
+                <option value="3">Possibly</option>
+                <option value="4">Very Probably</option>
+                <option value="5">Definitely</option>
+            </select>
+
+            <h4>10) Coding is your passion.</h4>
+            <select class="form-control mb-5" id="question10">
+                <option value="">Select...</option>
+                <option value="1">Strongly Disagree</option>
+                <option value="2">Disagree</option>
+                <option value="3">Undecided</option>
+                <option value="4">Agree</option>
+                <option value="5">Strongly Agree</option>
+            </select>
+
+            <button type="submit" class="btn btn-success btn-lg btn-block mb-5" id="submit">Match</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p><a href="/api/friends">API List of Friends</a> | <a href="https://github.com/denmasle/FriendFinder">GitHub Repository</a></p>
+        </div>
+    </footer>
+
+    <div id="modalMatch" class="modal fade bd-example-modal-lg" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Your closest match is:</h2>
+                </div>
+                <div class="modal-body">
+                    <h2 id="nameMatch"></h2>
+                    <img id="imgMatch" src="#" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $("#submit").on("click", function () {
+            var rightValue = true;
+            if ($("#name").val() === "") {
+                rightValue = false;
+            }
+            else if ($("#photo").val() === "") {
+                rightValue = false;
+            }
+            else if ($("#question1").val() === "" || $("#question2").val() === "" || $("#question3").val() === "" || $("#question4").val() === "" ||
+                $("#question5").val() === "" || $("#question6").val() === "" || $("#question7").val() === "" || $("#question8").val() === "" ||
+                $("#question9").val() === "" || $("#question10").val() === "") {
+                rightValue = false;
+            }
+
+            if (rightValue === true) {
+                var userSelect = {
+                    name: $("#name").val(),
+                    photo: $("#photo").val(),
+                    selection: [$("#question1").val(), $("#question2").val(), $("#question3").val(), $("#question4").val(), $("#question5").val(),
+                    $("#question6").val(), $("#question7").val(), $("#question8").val(), $("#question9").val(), $("#question10").val()]
+                }
+                console.log(userSelect)
+                console.log(window.location.origin)
+                var presentURL = window.location.origin;
+                $.post(presentURL + "/api/friends", userSelect, function (info) {
+                    console.log(info);
+                    $("#nameMatch").text(info.name);
+                    $("#imgMatch").attr("src", info.photo);
+                    $("#modalMatch").modal("toggle");
+                });
+            }
+            else {
+                alert("Your input was not recorded, review your responses!");
+            };
+        });
+    </script>
+</body>
+
+</html>
